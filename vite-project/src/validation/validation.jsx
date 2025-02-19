@@ -28,8 +28,7 @@ const loginChangeScheme = yup.object().shape({
         )
         .max(20, 'Допускается не больше 20 символов')
         .min(6, 'Допускается не меньше 6 символов')
-        .oneOf([yup.ref('password'), null], 'Пароли должны совпадать')
-        .required('Подтверждение пароля обязательно'),
+        .oneOf([yup.ref('password'), null], 'Пароли должны совпадать'),
 })
 
 export default loginChangeScheme
